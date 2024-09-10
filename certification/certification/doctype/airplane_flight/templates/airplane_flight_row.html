@@ -1,0 +1,18 @@
+<style>
+	p{
+		margin-bottom: 2px !important;
+	}
+	.flights{
+		border: 1px solid;
+		border-radius: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+</style>	
+<div class="container flights" >
+	<div >
+		<p><b>{{ airplane }}</b></p>
+		<p>{{ source_airport_code }} &#8594; {{ destination_airport_code }}</p>
+		<p>{{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }} / {{time_of_departure}} / {{ frappe.utils.format_duration(doc.duration) }}</p>
+	</div>
+</div>
