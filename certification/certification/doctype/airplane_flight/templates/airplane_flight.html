@@ -1,31 +1,44 @@
 {%  extends "templates/web.html" %}
 
 {% block page_content %}
+<style>
+    .erpnext-button {
+    background-color: #0088cc; /* ERPNext primary blue */
+    color: #ffffff;
+    border: 1px solid #0077b6;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
 
+.erpnext-button:hover {
+    background-color: #0077b6; /* Darker blue on hover */
+    border-color: #006bb3;
+}
+
+.erpnext-button:active {
+    background-color: #006bb3; /* Even darker blue when pressed */
+    border-color: #005b99;
+}
+
+.erpnext-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.4); /* Focus outline for accessibility */
+}
+</style>
 <div class="py-20 row">
-<div class="col-sm-2">
-<img alt="{{ title }}" src="{{ image }}"/>
+<div class="col-6" class="flights" style="border: 1px solid; border-radius: 10px; padding-bottom: 20px;">
+    <h3>{{ name }}</h3>
+    <h4>Flight Details</h4>
+    <p>{{ source_airport_code }} &#8594; {{ destination_airport_code }}</p>
+    <p>{{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }} | {{ time_of_departure }}</p>
+    <p>Duration: {{  frappe.utils.format_duration(doc.duration)  }}</p>
+    <button class="erpnext-button" onclick="window.location.href='/book-the-flight-ticket/new?flight={{ name }}&flight_price=10000';">Book Ticket</button>
 </div>
-<div class="col">
-<h1>{{ title }}</h1>
-<p class="lead">By {{ author }}</p>
-<div>
-
-            {%- if status == 'Available' -%}
-
-            <span class="badge badge-success">Available</span>
-            {%- elif status == 'Issued' -%}
-
-            <span class="badge badge-primary">Issued</span>
-
-            {%- endif -%}
-
-        </div>
-<div class="mt-4">
-<div>Publisher: <strong>{{ publisher }}</strong></div>
-<div>ISBN: <strong>{{ isbn }}</strong></div>
-</div>
-<p>{{ description }}</p>
+<div class="col-6">
+    
 </div>
 </div>
 

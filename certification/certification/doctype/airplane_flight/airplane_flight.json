@@ -9,6 +9,8 @@
  "engine": "InnoDB",
  "field_order": [
   "airplane",
+  "published",
+  "route",
   "column_break_dzle",
   "status",
   "section_break_kyyt",
@@ -22,9 +24,7 @@
   "column_break_zeqy",
   "destination_airport",
   "destination_airport_code",
-  "amended_from",
-  "is_published",
-  "route"
+  "amended_from"
  ],
  "fields": [
   {
@@ -121,22 +121,19 @@
    "search_index": 1
   },
   {
-   "depends_on": "is_published",
    "fieldname": "route",
    "fieldtype": "Data",
-   "label": "Route",
-   "read_only": 1
+   "label": "Route"
   },
   {
    "default": "0",
-   "fieldname": "is_published",
+   "fieldname": "published",
    "fieldtype": "Check",
-   "label": "Is Published?"
+   "label": "Published"
   }
  ],
  "has_web_view": 1,
- "index_web_pages_for_search": 1,
- "is_published_field": "is_published",
+ "is_published_field": "published",
  "is_submittable": 1,
  "links": [
   {
@@ -144,7 +141,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-09-10 12:24:58.889541",
+ "modified": "2024-09-10 13:44:43.700604",
  "modified_by": "Administrator",
  "module": "certification",
  "name": "Airplane Flight",

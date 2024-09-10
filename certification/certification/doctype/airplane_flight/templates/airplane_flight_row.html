@@ -8,11 +8,18 @@
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
+	a{
+		color: rgb(68, 142, 239);
+	}
+	.flight_row{
+		margin:10px;
+	}
 </style>	
 <div class="container flights" >
-	<div >
+	<div class="flight_row">
 		<p><b>{{ airplane }}</b></p>
 		<p>{{ source_airport_code }} &#8594; {{ destination_airport_code }}</p>
 		<p>{{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }} / {{time_of_departure}} / {{ frappe.utils.format_duration(doc.duration) }}</p>
+		<a href="/flights/{{ name }}">View Flight</a>
 	</div>
 </div>

@@ -6,6 +6,8 @@ from frappe.website.website_generator import WebsiteGenerator
 from frappe.model.document import Document
 
 
-class AirplaneFlight(Document):
+class AirplaneFlight(WebsiteGenerator):
+	def validate(self):
+		super().validate()
 	def on_submit(self):
 		self.status = "Completed"
