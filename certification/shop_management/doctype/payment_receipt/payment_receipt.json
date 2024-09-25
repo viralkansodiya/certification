@@ -40,6 +40,7 @@
    "fetch_from": "rent_agreement.shop_owner",
    "fieldname": "lessee",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Lessee",
    "options": "Lessee - Shop Owner"
   },
@@ -70,6 +71,7 @@
    "fetch_from": "rent_agreement.monthly_rent",
    "fieldname": "rent_amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Rent Amount",
    "read_only": 1
   },
@@ -77,13 +79,14 @@
    "default": "0",
    "fieldname": "is_advance",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Is Advance"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-25 17:33:52.125251",
+ "modified": "2024-09-25 21:03:39.253459",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Payment Receipt",

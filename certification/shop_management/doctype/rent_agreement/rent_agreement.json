@@ -10,6 +10,7 @@
   "amended_from",
   "shop_owner",
   "company_name",
+  "enable_payment_reminder",
   "column_break_phrh",
   "posting_date",
   "owner_name",
@@ -215,6 +216,12 @@
    "fieldname": "monthly_rent_payment_date",
    "fieldtype": "Int",
    "label": "Rent Payment Day of Month"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_payment_reminder",
+   "fieldtype": "Check",
+   "label": "Enable Payment Reminder"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -225,7 +232,7 @@
    "link_fieldname": "rent_agreement"
   }
  ],
- "modified": "2024-09-25 17:01:37.072514",
+ "modified": "2024-09-25 21:59:31.825909",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Rent Agreement",

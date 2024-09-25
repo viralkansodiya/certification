@@ -10,7 +10,9 @@
   "terminal",
   "shop_no",
   "shop_size",
-  "standard_rent"
+  "standard_rent",
+  "column_break_rwjf",
+  "status"
  ],
  "fields": [
   {
@@ -39,11 +41,21 @@
    "fieldname": "standard_rent",
    "fieldtype": "Currency",
    "label": "Standard Rent"
+  },
+  {
+   "fieldname": "column_break_rwjf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nBooked\nAvailable"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-25 16:33:54.189693",
+ "modified": "2024-09-25 22:05:12.233683",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Shop Detail",
