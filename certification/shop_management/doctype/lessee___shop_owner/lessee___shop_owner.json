@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LSO.####",
+ "creation": "2024-09-22 11:35:13.407282",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "owner_name",
+  "company_name",
+  "business_type",
+  "column_break_mtzx",
+  "company_logo",
+  "contact_information_section",
+  "contact_detail",
+  "person_address",
+  "address_display",
+  "contact_html",
+  "column_break_crke",
+  "contact_person_name",
+  "mobile_no",
+  "phone_no",
+  "email_id",
+  "section_break_gpvn",
+  "is_franchised",
+  "franchise_name",
+  "column_break_ephc",
+  "website_link"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company name (Shop Name)"
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Link",
+   "label": "Business Type",
+   "options": "Business Type"
+  },
+  {
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "label": "Owner Name"
+  },
+  {
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "contact_detail",
+   "fieldtype": "Link",
+   "label": "Contact Detail",
+   "options": "Contact"
+  },
+  {
+   "fetch_from": "contact_detail.full_name",
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact_detail.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact_detail.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact_detail.phone",
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_gpvn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_franchised",
+   "fieldtype": "Check",
+   "label": "Is Franchised"
+  },
+  {
+   "depends_on": "is_franchised",
+   "fieldname": "franchise_name",
+   "fieldtype": "Data",
+   "label": "Franchise Name"
+  },
+  {
+   "fieldname": "column_break_crke",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "person_address",
+   "fieldtype": "Link",
+   "label": "Person Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "address_display",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML"
+  },
+  {
+   "fieldname": "website_link",
+   "fieldtype": "Data",
+   "label": "Website Link"
+  },
+  {
+   "fieldname": "column_break_ephc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mtzx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach Image",
+   "label": "Company Logo"
+  }
+ ],
+ "image_field": "company_logo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-25 16:55:38.093385",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Lessee - Shop Owner",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "owner_name"
+}

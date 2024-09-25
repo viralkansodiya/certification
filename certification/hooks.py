@@ -151,6 +151,12 @@ app_license = "mit"
 # 	],
 # }
 
+scheduler_events = {
+	"daily": [
+		"certification.shop_management.doctype.rent_agreement.rent_agreement.update_agreement_status"
+	]
+}
+
 # Testing
 # -------
 

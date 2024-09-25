@@ -15,6 +15,7 @@
   "amended_from",
   "column_break_lllb",
   "destination_airport_code",
+  "gate_no",
   "section_break_drnd",
   "departure_date",
   "departure_time",
@@ -162,12 +163,19 @@
    "fieldtype": "Data",
    "label": "Seat",
    "read_only": 1
+  },
+  {
+   "fetch_from": "flight.gate_no",
+   "fieldname": "gate_no",
+   "fieldtype": "Data",
+   "label": "Gate No",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-08 15:30:37.705032",
+ "modified": "2024-09-20 09:26:15.840380",
  "modified_by": "Administrator",
  "module": "certification",
  "name": "Airplane Ticket",
@@ -185,6 +193,45 @@
    "role": "System Manager",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1,
    "write": 1
   }
  ],

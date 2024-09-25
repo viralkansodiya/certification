@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PR-{DD}-{MM}-{YYYY}-{####}",
+ "creation": "2024-09-25 08:20:12.612497",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_o4tp",
+  "amended_from",
+  "section_break_qzfd",
+  "rent_agreement",
+  "lessee_shop_owner",
+  "shop",
+  "shop_no",
+  "rent_amount",
+  "payment_day_of_month",
+  "column_break_mbxs",
+  "posting_date",
+  "mobile_no",
+  "email_id",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_o4tp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_qzfd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "rent_agreement.shop_detail",
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "label": "Shop",
+   "options": "Shop Detail"
+  },
+  {
+   "fetch_from": "rent_agreement.shop_owner",
+   "fieldname": "lessee_shop_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lessee - Shop Owner",
+   "options": "Lessee - Shop Owner"
+  },
+  {
+   "fieldname": "rent_agreement",
+   "fieldtype": "Link",
+   "label": "Rent Agreement",
+   "link_filters": "[[\"Rent Agreement\",\"docstatus\",\"=\",\"1\"]]",
+   "options": "Rent Agreement"
+  },
+  {
+   "fetch_from": "rent_agreement.monthly_rent",
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "column_break_mbxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "lessee_shop_owner.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fetch_from": "lessee_shop_owner.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "options": "Email"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Unpaid",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Paid\nUnpaid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fetch_from": "shop.shop_no",
+   "fieldname": "shop_no",
+   "fieldtype": "Data",
+   "label": "Shop No"
+  },
+  {
+   "fetch_from": "rent_agreement.monthly_rent_payment_date",
+   "fieldname": "payment_day_of_month",
+   "fieldtype": "Data",
+   "label": "Payment Day of Month",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-25 19:04:10.989035",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Payment Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

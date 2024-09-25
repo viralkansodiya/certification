@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SHOP-{airport}-{terminal}-{shop_no}",
+ "creation": "2024-09-22 10:49:26.578014",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "airport",
+  "terminal",
+  "shop_no",
+  "shop_size",
+  "standard_rent"
+ ],
+ "fields": [
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Airport",
+   "options": "Airport"
+  },
+  {
+   "fieldname": "shop_no",
+   "fieldtype": "Data",
+   "label": "Shop No"
+  },
+  {
+   "fieldname": "terminal",
+   "fieldtype": "Data",
+   "label": "Terminal or Area"
+  },
+  {
+   "fieldname": "shop_size",
+   "fieldtype": "Data",
+   "label": "Shop Size(In Square Feet) "
+  },
+  {
+   "fieldname": "standard_rent",
+   "fieldtype": "Currency",
+   "label": "Standard Rent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-25 16:33:54.189693",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Shop Detail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "shop_no,airport,terminal",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
