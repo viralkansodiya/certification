@@ -8,7 +8,7 @@ from frappe.model.mapper import get_mapped_doc
 
 
 class RentAgreement(Document):
-	def on_submit(self):
+	def validate(self):
 		docname = self.name
 		data = frappe.db.sql(f"""
 						Select name, start_date, end_date
@@ -16,13 +16,17 @@ class RentAgreement(Document):
 					   Where start_date <= '{self.end_date}' AND end_date >= '{self.start_date}' and name != '{docname}' and shop_detail = '{self.shop_detail}'
 				""", as_dict=1)
 		if(len(data)):
-			frappe.throw("Rent Agreement Already booked for {1} to {2}, <b>{0}</b>".format(get_link_to_form("Rent Agreement", data[0].get('name')), data[0].get('start_date'), data[0].get('end_date')))
+			frappe.throw("This Shop id already Booked for {1} to {2}, <b>{0}</b>".format(get_link_to_form("Rent Agreement", data[0].get('name')), data[0].get('start_date'), data[0].get('end_date')))
 
 		frappe.db.set_value("Shop Detail", self.shop_detail , "status", "Booked")
 
 	def on_cancel(self):
 		self.status = "Cancelled"
 		frappe.db.set_value("Shop Detail", self.shop_detail , "status", "Available")
+
+	def on_submit(self):
+		if not frappe.db.exists("Payment Receipt", {'is_advance':1, "rent_agreement" : self.name}):
+			frappe.throw("Collect Advance Amount if not received and create payment receipt")
 
 
 @frappe.whitelist()

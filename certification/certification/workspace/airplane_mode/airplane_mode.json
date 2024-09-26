@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"2ElF-OEIrX\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Mode</span>\",\"col\":12}},{\"id\":\"rPg-2Xhzzv\",\"type\":\"card\",\"data\":{\"card_name\":\"Pages\",\"col\":4}},{\"id\":\"8UXXaetRUY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Airplanes\",\"col\":3}},{\"id\":\"VFrFkf09nD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Passengers\",\"col\":3}},{\"id\":\"4LhOjQtgnh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airlines\",\"col\":3}},{\"id\":\"ORL49y_04C\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Shop Management</b></span>\",\"col\":12}},{\"id\":\"w0DFzsUJVJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Receipt\",\"col\":3}},{\"id\":\"d-DfU2c4yR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Agreement\",\"col\":3}},{\"id\":\"px2awymBK3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lessee   Shop Owner\",\"col\":3}},{\"id\":\"UjKoEUZcTK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shop Detail\",\"col\":3}},{\"id\":\"jQ4-mkERsB\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"2ElF-OEIrX\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Mode</span>\",\"col\":12}},{\"id\":\"8UXXaetRUY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Airplanes\",\"col\":3}},{\"id\":\"VFrFkf09nD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Passengers\",\"col\":3}},{\"id\":\"rPg-2Xhzzv\",\"type\":\"card\",\"data\":{\"card_name\":\"Pages\",\"col\":4}}]",
  "creation": "2024-09-08 10:03:18.573613",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,25 +12,6 @@
  "is_hidden": 0,
  "label": "Airplane Mode",
  "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Reports",
-   "link_count": 1,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Airport Wise Shop Details",
-   "link_count": 0,
-   "link_to": "Airport Wise Shop Details",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
   {
    "hidden": 0,
    "is_query_report": 0,
@@ -61,7 +42,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-09-23 16:43:55.563613",
+ "modified": "2024-09-26 10:44:38.775883",
  "modified_by": "Administrator",
  "module": "certification",
  "name": "Airplane Mode",
@@ -76,48 +57,8 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Rent Agreement",
-   "link_to": "Rent Agreement",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Payment Receipt",
-   "link_to": "Payment Receipt",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Airlines",
-   "link_to": "Airline",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Lessee   Shop Owner",
-   "link_to": "Lessee - Shop Owner",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
    "label": "All Passengers",
    "link_to": "Flight Passenger",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Shop Detail",
-   "link_to": "Shop Detail",
    "stats_filter": "[]",
    "type": "DocType"
   },

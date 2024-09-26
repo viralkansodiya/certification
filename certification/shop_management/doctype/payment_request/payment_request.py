@@ -5,6 +5,8 @@ import frappe
 from frappe.model.document import Document
 import calendar
 from frappe.utils import getdate
+from frappe.model.mapper import get_mapped_doc
+
 
 
 class PaymentRequest(Document):
@@ -65,5 +67,24 @@ def notification_payment_reminder():
 				)
 		
 
+@frappe.whitelist()
+def create_payment_receipt(source_name, target_doc=None):
+	doclist = get_mapped_doc(
+		"Payment Request",
+		source_name,
+		{
+			"Payment Request": {
+				"doctype": "Payment Receipt",
+				"field_map": {
+					"name":"payment_request",
+					"shop":"shop_details",
+					"lessee_shop_owner" : "lessee"
+				},
+			},
 
+		},
+		target_doc,
+	)
+
+	return doclist
 

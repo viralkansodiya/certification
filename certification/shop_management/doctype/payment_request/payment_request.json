@@ -116,8 +116,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-09-25 19:04:10.989035",
+ "links": [
+  {
+   "link_doctype": "Payment Receipt",
+   "link_fieldname": "payment_request"
+  }
+ ],
+ "modified": "2024-09-26 11:38:07.204893",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Payment Request",

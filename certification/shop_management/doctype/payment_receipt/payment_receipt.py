@@ -10,7 +10,7 @@ class PaymentReceipt(Document):
 	def validate(self):
 		receipts = frappe.db.sql(f"""Select name, rent_agreement, posting_date
 						   			From `tabPayment Receipt`
-						   			Where rent_agreement = '{self.rent_agreement}' and name != '{self.name}'
+						   			Where rent_agreement = '{self.rent_agreement}' and name != '{self.name}' and is_advance = 0
 						   		""", as_dict=1)
 
 		for row in receipts:
@@ -25,3 +25,11 @@ class PaymentReceipt(Document):
 			return False  
 		
 		return True
+	
+	def on_submit(self):
+		if not self.is_advance:
+			frappe.db.set_value("Payment Request", self.payment_request, "status", "Paid")
+
+	def on_cancel(self):
+		if not self.is_advance:
+			frappe.db.set_value("Payment Request", self.payment_request, "status", "Unpaid")

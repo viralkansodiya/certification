@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:SHOP-{airport}-{terminal}-{shop_no}",
  "creation": "2024-09-22 10:49:26.578014",
@@ -12,7 +13,9 @@
   "shop_size",
   "standard_rent",
   "column_break_rwjf",
-  "status"
+  "status",
+  "route",
+  "is_published"
  ],
  "fields": [
   {
@@ -47,15 +50,30 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Available",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "\nBooked\nAvailable"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2024-09-25 22:05:12.233683",
+ "modified": "2024-09-26 09:12:43.026782",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Shop Detail",
@@ -75,6 +93,7 @@
    "write": 1
   }
  ],
+ "route": "shop_details",
  "search_fields": "shop_no,airport,terminal",
  "sort_field": "modified",
  "sort_order": "DESC",

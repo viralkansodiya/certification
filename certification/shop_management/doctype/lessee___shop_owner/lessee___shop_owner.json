@@ -31,7 +31,7 @@
   {
    "fieldname": "company_name",
    "fieldtype": "Data",
-   "label": "Company name (Shop Name)"
+   "label": "Brand name (Shop Name)"
   },
   {
    "fieldname": "business_type",
@@ -141,8 +141,13 @@
  ],
  "image_field": "company_logo",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-09-25 21:22:05.910701",
+ "links": [
+  {
+   "link_doctype": "Rent Agreement",
+   "link_fieldname": "shop_owner"
+  }
+ ],
+ "modified": "2024-09-26 11:47:18.049287",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Lessee - Shop Owner",

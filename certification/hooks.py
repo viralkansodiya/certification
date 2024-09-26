@@ -154,7 +154,15 @@ app_license = "mit"
 scheduler_events = {
 	"daily": [
 		"certification.shop_management.doctype.rent_agreement.rent_agreement.update_agreement_status"
-	]
+	],
+    "monthly" : [
+        "certification.shop_management.doctype.rent_agreement.rent_agreement.create_payment_request"
+	],
+    "cron": {
+		"0 0 15 * *": [
+			"certification.shop_management.doctype.payment_request.payment_request.notification_payment_reminder"
+		],
+	},
 }
 
 # Testing

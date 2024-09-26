@@ -15,7 +15,8 @@
   "column_break_mxcu",
   "posting_date",
   "is_advance",
-  "rent_amount"
+  "rent_amount",
+  "payment_request"
  ],
  "fields": [
   {
@@ -69,6 +70,7 @@
   },
   {
    "fetch_from": "rent_agreement.monthly_rent",
+   "fetch_if_empty": 1,
    "fieldname": "rent_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -81,12 +83,19 @@
    "fieldtype": "Check",
    "in_list_view": 1,
    "label": "Is Advance"
+  },
+  {
+   "fieldname": "payment_request",
+   "fieldtype": "Link",
+   "label": "Payment Request",
+   "options": "Payment Request",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-25 21:03:39.253459",
+ "modified": "2024-09-26 11:15:46.899476",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Payment Receipt",
