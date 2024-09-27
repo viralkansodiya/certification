@@ -31,7 +31,9 @@
   {
    "fieldname": "company_name",
    "fieldtype": "Data",
-   "label": "Brand name (Shop Name)"
+   "in_list_view": 1,
+   "label": "Brand name (Shop Name)",
+   "reqd": 1
   },
   {
    "fieldname": "business_type",
@@ -42,7 +44,9 @@
   {
    "fieldname": "owner_name",
    "fieldtype": "Data",
-   "label": "Owner Name"
+   "in_list_view": 1,
+   "label": "Owner Name",
+   "reqd": 1
   },
   {
    "fieldname": "contact_information_section",
@@ -52,8 +56,10 @@
   {
    "fieldname": "contact_detail",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Contact Detail",
-   "options": "Contact"
+   "options": "Contact",
+   "reqd": 1
   },
   {
    "fetch_from": "contact_detail.full_name",
@@ -74,7 +80,8 @@
    "fieldname": "email_id",
    "fieldtype": "Data",
    "label": "Email ID",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "contact_detail.phone",
@@ -106,8 +113,10 @@
   {
    "fieldname": "person_address",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Person Address",
-   "options": "Address"
+   "options": "Address",
+   "reqd": 1
   },
   {
    "fieldname": "address_display",
@@ -147,7 +156,7 @@
    "link_fieldname": "shop_owner"
   }
  ],
- "modified": "2024-09-26 11:47:18.049287",
+ "modified": "2024-09-26 21:01:38.386045",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Lessee - Shop Owner",

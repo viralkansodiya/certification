@@ -21,6 +21,12 @@ frappe.query_reports["Rent Payment History"] = {
 			"label" : "Shop Owner"
 		},
 		{
+			"fieldname" : "status",
+			"fieldtype" : "Select",
+			"options" : ['', "Paid", "Unpaid"],
+			"label" : "Payment Status"
+		},
+		{
 			"fieldname" : "from_date",
 			"fieldtype" : "Date",
 			"label" : "From Date"

@@ -2,6 +2,16 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Rent Agreement", {
+    setup:function(frm){
+        frm.ignore_doctypes_on_cancel_all = [
+			"Payment Receipt", "Payment Request"
+		];
+    },
+    onload: function (frm) {
+		frm.ignore_doctypes_on_cancel_all = [
+			"Payment Receipt", "Payment Request"
+		];
+    },
 	year:function(frm) {
         if(!frm.doc.start_date){
             frappe.throw("First add start date of rent agreement")

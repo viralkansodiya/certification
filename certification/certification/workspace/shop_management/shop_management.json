@@ -1,0 +1,83 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"x7q9n3Eyc_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Shop Management</span>\",\"col\":12}},{\"id\":\"ThOQeijG_7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Agreement\",\"col\":3}},{\"id\":\"Gi0iGsvZVa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lessee   Shop Owner\",\"col\":3}},{\"id\":\"uTBw9nW4sn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shop Detail\",\"col\":3}},{\"id\":\"dpyxdstkKT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Receipt\",\"col\":3}},{\"id\":\"O6GejM4B7R\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Request\",\"col\":3}},{\"id\":\"c87w0uBB0q\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h2\\\">Report</span>\",\"col\":12}},{\"id\":\"21QNayLKtQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airport Wise Shop Details\",\"col\":3}},{\"id\":\"2FNZF4xelF\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Page</b></span>\",\"col\":12}},{\"id\":\"ZjJxh9qLG6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shop Details Portal\",\"col\":3}}]",
+ "creation": "2024-09-26 10:38:03.773550",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Shop Management",
+ "links": [],
+ "modified": "2024-09-27 09:23:53.376189",
+ "modified_by": "Administrator",
+ "module": "certification",
+ "name": "Shop Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 29.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Lessee   Shop Owner",
+   "link_to": "Lessee - Shop Owner",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Rent Agreement",
+   "link_to": "Rent Agreement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Airport Wise Shop Details",
+   "link_to": "Airport Wise Shop Details",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Shop Details Portal",
+   "type": "URL",
+   "url": "https://certification.fosscrm.com/shop_details"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Shop Detail",
+   "link_to": "Shop Detail",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payment Receipt",
+   "link_to": "Payment Receipt",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payment Request",
+   "link_to": "Payment Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Shop Management"
+}

@@ -15,3 +15,4 @@ def get_flight_details(date):
 @frappe.whitelist()
 def update_get_no(name, gate_no):
     frappe.db.set_value("Airplane Flight", name, "gate_no", gate_no)
+    return "Gate No is successfully updated"

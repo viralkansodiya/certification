@@ -23,6 +23,7 @@ class RentAgreement(Document):
 	def on_cancel(self):
 		self.status = "Cancelled"
 		frappe.db.set_value("Shop Detail", self.shop_detail , "status", "Available")
+		self.ignore_linked_doctypes = ["Payment Receipt", "Payment Request"]
 
 	def on_submit(self):
 		if not frappe.db.exists("Payment Receipt", {'is_advance':1, "rent_agreement" : self.name}):

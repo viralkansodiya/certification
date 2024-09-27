@@ -76,7 +76,7 @@ frappe.UpdateFlight = {
 				)
 				r.message.forEach( e => {
 					this.add_small_cards(wrapper, e)
-					$("."+ e.name).on('click', ()=> {
+					$("."+ e.name + "button").on('click', ()=> {
 						this.update_gate_no(e.name)	
 					})
 				});
@@ -96,7 +96,7 @@ frappe.UpdateFlight = {
 				<p><b>Time of Departure:</b> ${e.time_of_departure}</p>
 				<label for=${e.name}>Gate No:</label>
    				<input type="text" id=${e.name} class=${e.name} name=${e.name} value=${e.gate_no || ''}>
-				<button class="btn btn-primary ${e.name}" >Update Gate Number</button>
+				<button class="btn btn-primary ${e.name}button" >Update Gate Number</button>
 			</div>
 			`
 		)
@@ -104,13 +104,15 @@ frappe.UpdateFlight = {
 	},
 
 	update_gate_no:function(name){
-		console.log("update_gate_no")
 		var inputValue = $('.' + name).val();
 		frappe.call({
 			method : "certification.certification.page.update_gate_no_of_flights.api.update_get_no",
 			args : {
 				"name" : name,
 				"gate_no" : inputValue
+			},
+			callback:r=>{
+				frappe.msgprint(r.message)
 			}
 		})
 	},
@@ -125,7 +127,7 @@ frappe.UpdateFlight = {
 			callback:r=>{
 				r.message.forEach( e => {
 					add_small_cards(wrapper, e)
-					$("."+ e.name).on('click', ()=> {
+					$("."+ e.name + "button").on('click', ()=> {
 						this.update_gate_no(e.name)	
 					})
 				});

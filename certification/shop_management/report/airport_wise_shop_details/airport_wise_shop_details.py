@@ -16,7 +16,7 @@ def get_data(filters):
 		condition += f" and sd.airport = '{filters.get('airport')}'"
 	data = frappe.db.sql(f"""
     SELECT sd.name, sd.shop_no, sd.airport, sd.terminal, sd.shop_size, sd.standard_rent, ra.name AS rent_agreement, 
-           ra.shop_owner, ra.company_name, ra.start_date, ra.end_date, ra.standard_rate AS monthly_rent, 
+           ra.shop_owner, ra.company_name, ra.start_date, ra.end_date, ra.monthly_rent, sd.status as shop_status,
            ra.advance_amount, ra.status
 		FROM `tabShop Detail` AS sd
 		LEFT JOIN `tabRent Agreement` AS ra ON sd.name = ra.shop_detail AND ra.status = 'Active' AND ra.docstatus = 1
@@ -55,8 +55,12 @@ def get_data(filters):
 		{
 			"fieldname" : "standard_rent",
 			"fieldtype" : "data",
-			"label" : "Shop Size(In Square Feet)",
-			"options" : "Airport",
+			"label" : "Rent",
+		},
+		{
+			"fieldname" : "shop_status",
+			"fieldtype" : "data",
+			"label" : "Shop Status",
 		},
 		{
 			"fieldname" : "rent_agreement",
@@ -110,7 +114,7 @@ def get_data(filters):
 		{
 			"fieldname" : "remaining_date",
 			"fieldtype" : "Data",
-			"label" : "Remaining Date",	
+			"label" : "Remaining Days",	
 		}
 
 	]

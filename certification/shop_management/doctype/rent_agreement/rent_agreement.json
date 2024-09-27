@@ -67,7 +67,8 @@
    "default": "Today",
    "fieldname": "posting_date",
    "fieldtype": "Date",
-   "label": "Posting Date"
+   "label": "Posting Date",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_ksgo",
@@ -219,10 +220,12 @@
    "label": "Rent Payment Day of Month"
   },
   {
+   "allow_on_submit": 1,
    "default": "0",
    "fieldname": "enable_payment_reminder",
    "fieldtype": "Check",
-   "label": "Enable Payment Reminder"
+   "label": "Enable Payment Reminder",
+   "permlevel": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -233,7 +236,7 @@
    "link_fieldname": "rent_agreement"
   }
  ],
- "modified": "2024-09-26 10:53:33.900434",
+ "modified": "2024-09-27 13:45:50.488918",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Rent Agreement",

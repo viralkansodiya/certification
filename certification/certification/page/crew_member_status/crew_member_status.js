@@ -73,7 +73,7 @@ frappe.CrewMemberStatus = {
 			`
 			<div class="flight-card col-3" style="border : 2px;">
 				<h4>${e.name}</h4>
-				<p><b>Airline:</b> ${e.full_name} </p>
+				<p><b>Pasanger Name:</b> ${e.full_name} </p>
 				<p><b>Date of Birth:</b> ${e.date_of_birth}</p>
 				<p><b>Seat No:</b> ${e.seat}</p>
 				<p><b>Date of Departure:</b> ${e.departure_date}</p>
